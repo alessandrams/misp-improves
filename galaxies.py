@@ -4,10 +4,11 @@
 from pymisp import PyMISP
 from pymisp import MISPEvent
 from keys import misp_url, misp_key, misp_verifycert
+from datetime import date, timedelta
 
 
 def check_geolocation_galaxy(cluster):
-    relevant_geolocations = ["Brazil","brazil","Ukraine"]
+    relevant_geolocations = ["Brazil","brazil","Chile","chile"]
 
     if cluster in relevant_geolocations:
         return True
@@ -26,11 +27,13 @@ if __name__ == '__main__':
     ## 12 = Country
     ## 53 = Target Information
 
+    date_search = date.today() - timedelta(26)
+
     relevant_galaxy_ids = ["11","52"]   
 
     misp = PyMISP(misp_url, misp_key, misp_verifycert, debug=False)
 
-    events = misp.search(org='CUDESO', metadata=True)
+    events = misp.search(date_from=date_search, metadata=True)
 
     for event in events:
         for galaxy in event['Event']['Galaxy']:
@@ -38,10 +41,6 @@ if __name__ == '__main__':
                 for cluster in galaxy['GalaxyCluster']:
                     if check_geolocation_galaxy(cluster['value']):
                         event_test = misp.get_event(event['Event']['id'], pythonify=True)
-                        print(event_test.info)
-                        event_test.add_tag('BitRAT')
-                        print(event_test.info)
+                        event_test.add_tag('import:opencti')
                         misp.update_event(event_test)
-                        print(event['Event']['id'])
-                        print(cluster['value'])
 
