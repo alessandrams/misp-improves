@@ -8,7 +8,7 @@ from datetime import date, timedelta
 
 
 def check_geolocation_galaxy(cluster):
-    with open('geolocations.txt', 'r') as f:
+    with open('key-words/geolocations.txt', 'r') as f:
         relevant_geolocations = f.read().splitlines()
 
     if cluster in relevant_geolocations:
@@ -17,7 +17,7 @@ def check_geolocation_galaxy(cluster):
         return False    
 
 def check_sector_galaxy(cluster):
-    with open('sectors.txt', 'r') as f:
+    with open('key-words/sectors.txt', 'r') as f:
         relevant_sectors = f.read().splitlines()
 
     if cluster in relevant_sectors:
@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
     date_search = date.today() - timedelta(26)
 
-    with open('galaxies_ids.txt', 'r') as f:
+    with open('key-words/galaxies_ids.txt', 'r') as f:
         relevant_galaxy_ids = f.read().splitlines()  
 
     misp = PyMISP(misp_url, misp_key, misp_verifycert, debug=False)
