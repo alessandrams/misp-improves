@@ -8,9 +8,19 @@ from datetime import date, timedelta
 
 
 def check_geolocation_galaxy(cluster):
-    relevant_geolocations = ["Brazil","brazil","Chile","chile"]
+    with open('geolocations.txt', 'r') as f:
+        relevant_geolocations = f.read().splitlines()
 
     if cluster in relevant_geolocations:
+        return True
+    else:
+        return False    
+
+def check_sector_galaxy(cluster):
+    with open('sectors.txt', 'r') as f:
+        relevant_sectors = f.read().splitlines()
+
+    if cluster in relevant_sectors:
         return True
     else:
         return False    
@@ -18,18 +28,15 @@ def check_geolocation_galaxy(cluster):
 
 if __name__ == '__main__':
 
-    ## IDs CEPESC:
-    ## 12 = Country
-    ## 53 = Target Information
-    #relevant_galaxy_ids = ["12","53"]   
-
     ## IDs MPH:
-    ## 12 = Country
-    ## 53 = Target Information
+    ## 11 = Country
+    ## 52 = Target Information
+    ## 47 = Sector
 
     date_search = date.today() - timedelta(26)
 
-    relevant_galaxy_ids = ["11","52"]   
+    with open('galaxies_ids.txt', 'r') as f:
+        relevant_galaxy_ids = f.read().splitlines()  
 
     misp = PyMISP(misp_url, misp_key, misp_verifycert, debug=False)
 
@@ -39,7 +46,7 @@ if __name__ == '__main__':
         for galaxy in event['Event']['Galaxy']:
             if galaxy['id'] in relevant_galaxy_ids:
                 for cluster in galaxy['GalaxyCluster']:
-                    if check_geolocation_galaxy(cluster['value']):
+                    if check_geolocation_galaxy(cluster['value']) or check_sector_galaxy(cluster['value']):
                         event_test = misp.get_event(event['Event']['id'], pythonify=True)
                         event_test.add_tag('import:opencti')
                         misp.update_event(event_test)

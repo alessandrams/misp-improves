@@ -1,3 +1,5 @@
+Usando o get_event(*)
+
  ["Galaxy"]["GalaxyCluster"]["name" ou "type" ou "id"] : identificação da Galaxy
  ["Galaxy"]["GalaxyCluster"]["meta"]["value"]: nome do cluster
  ["Galaxy"]["GalaxyCluster"]["meta"]["galaxy_id"]: id da galaxy
