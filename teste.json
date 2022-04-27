@@ -1,0 +1,235 @@
+{
+    "Galaxy": [
+        {
+          "GalaxyCluster": [
+            {
+              "meta": {
+                "refs": [
+                  "https://malpedia.caad.fkie.fraunhofer.de/details/win.arkei_stealer",
+                  "https://www.spamhaus.org/news/images/botnet-report-2020-q2/2020-q2-spamhaus-botnet-threat-report.pdf",
+                  "https://www.bleepingcomputer.com/news/security/hacker-breaches-syscoin-github-account-and-poisons-official-client/"
+                ],
+                "synonyms": [
+                  "ArkeiStealer"
+                ]
+              },
+              "default": true,
+              "distribution": "3",
+              "uuid": "59eff508-7f26-4fd8-b526-5772a9f3d9a6",
+              "Org": {
+                "id": "0",
+                "name": "MISP",
+                "date_created": "",
+                "date_modified": "",
+                "description": "Automatically generated MISP organisation",
+                "type": "",
+                "nationality": "Not specified",
+                "sector": "",
+                "created_by": "0",
+                "uuid": "0",
+                "contacts": "",
+                "local": true
+              },
+              "Orgc": {
+                "id": "0",
+                "name": "MISP",
+                "date_created": "",
+                "date_modified": "",
+                "description": "Automatically generated MISP organisation",
+                "type": "",
+                "nationality": "Not specified",
+                "sector": "",
+                "created_by": "0",
+                "uuid": "0",
+                "contacts": "",
+                "local": true
+              },
+              "id": "1928",
+              "collection_uuid": "5fc98d08-90a4-498a-ad2e-0edf50ef374e",
+              "type": "malpedia",
+              "value": "Arkei Stealer",
+              "tag_name": "misp-galaxy:malpedia=\"Arkei Stealer\"",
+              "description": "",
+              "galaxy_id": "16",
+              "source": "Malpedia",
+              "authors": [
+                "Davide Arcuri",
+                "Alexandre Dulaunoy",
+                "Steffen Enders",
+                "Andrea Garavaglia",
+                "Andras Iklody",
+                "Daniel Plohmann",
+                "Christophe Vandeplas"
+              ],
+              "version": "11601",
+              "org_id": "0",
+              "orgc_id": "0",
+              "locked": false,
+              "extends_uuid": "",
+              "extends_version": "0",
+              "published": false,
+              "deleted": false,
+              "tag_id": "1404",
+              "local": false
+            },
+            {
+              "meta": {
+                "refs": [
+                  "https://malpedia.caad.fkie.fraunhofer.de/details/win.oski",
+                  "https://www.cyberark.com/resources/threat-research-blog/meet-oski-stealer-an-in-depth-analysis-of-the-popular-credential-stealer",
+                  "https://labs.bitdefender.com/2020/03/new-router-dns-hijacking-attacks-abuse-bitbucket-to-host-infostealer/",
+                  "https://yoroi.company/research/the-wayback-campaign-a-large-scale-operation-hiding-in-plain-sight/",
+                  "https://drive.google.com/file/d/1c72YIF6JYcEvbFZCrkZO26D9hC3gnyMP/view",
+                  "https://twitter.com/albertzsigovits/status/1160874557454131200"
+                ]
+              },
+              "default": true,
+              "distribution": "3",
+              "uuid": "414d8e68-77e7-4157-936a-d70d80e5efc0",
+              "Org": {
+                "id": "0",
+                "name": "MISP",
+                "date_created": "",
+                "date_modified": "",
+                "description": "Automatically generated MISP organisation",
+                "type": "",
+                "nationality": "Not specified",
+                "sector": "",
+                "created_by": "0",
+                "uuid": "0",
+                "contacts": "",
+                "local": true
+              },
+              "Orgc": {
+                "id": "0",
+                "name": "MISP",
+                "date_created": "",
+                "date_modified": "",
+                "description": "Automatically generated MISP organisation",
+                "type": "",
+                "nationality": "Not specified",
+                "sector": "",
+                "created_by": "0",
+                "uuid": "0",
+                "contacts": "",
+                "local": true
+              },
+              "id": "2864",
+              "collection_uuid": "5fc98d08-90a4-498a-ad2e-0edf50ef374e",
+              "type": "malpedia",
+              "value": "Oski Stealer",
+              "tag_name": "misp-galaxy:malpedia=\"Oski Stealer\"",
+              "description": "",
+              "galaxy_id": "16",
+              "source": "Malpedia",
+              "authors": [
+                "Davide Arcuri",
+                "Alexandre Dulaunoy",
+                "Steffen Enders",
+                "Andrea Garavaglia",
+                "Andras Iklody",
+                "Daniel Plohmann",
+                "Christophe Vandeplas"
+              ],
+              "version": "11601",
+              "org_id": "0",
+              "orgc_id": "0",
+              "locked": false,
+              "extends_uuid": "",
+              "extends_version": "0",
+              "published": false,
+              "deleted": false,
+              "tag_id": "1405",
+              "local": false
+            }
+          ],
+          "id": "16",
+          "uuid": "1d1c9af9-37fa-4deb-a928-f9b0abc7354a",
+          "name": "Malpedia",
+          "type": "malpedia",
+          "description": "Malware galaxy based on Malpedia archive.",
+          "version": "1",
+          "icon": "shield",
+          "namespace": "misp",
+          "enabled": true,
+          "local_only": false
+        },
+        {
+          "GalaxyCluster": [
+            {
+              "meta": {
+                "date": [
+                  "Dec 2018."
+                ],
+                "refs": [
+                  "https://malpedia.caad.fkie.fraunhofer.de/details/win.vidar"
+                ]
+              },
+              "default": true,
+              "distribution": "3",
+              "uuid": "045ab0d5-2f08-4fcd-af47-81c1143fa5fb",
+              "Org": {
+                "id": "0",
+                "name": "MISP",
+                "date_created": "",
+                "date_modified": "",
+                "description": "Automatically generated MISP organisation",
+                "type": "",
+                "nationality": "Not specified",
+                "sector": "",
+                "created_by": "0",
+                "uuid": "0",
+                "contacts": "",
+                "local": true
+              },
+              "Orgc": {
+                "id": "0",
+                "name": "MISP",
+                "date_created": "",
+                "date_modified": "",
+                "description": "Automatically generated MISP organisation",
+                "type": "",
+                "nationality": "Not specified",
+                "sector": "",
+                "created_by": "0",
+                "uuid": "0",
+                "contacts": "",
+                "local": true
+              },
+              "id": "9237",
+              "collection_uuid": "f2ef4033-9001-4427-a418-df8c48e6d054",
+              "type": "stealer",
+              "value": "Vidar",
+              "tag_name": "misp-galaxy:stealer=\"Vidar\"",
+              "description": "Vidar is a forked malware based on Arkei. It seems this stealer is one of the first that is grabbing information on 2FA Software and Tor Browser.",
+              "galaxy_id": "51",
+              "source": "Open Sources",
+              "authors": [
+                "raw-data"
+              ],
+              "version": "8",
+              "org_id": "0",
+              "orgc_id": "0",
+              "locked": false,
+              "extends_uuid": "",
+              "extends_version": "0",
+              "published": false,
+              "deleted": false,
+              "tag_id": "1406",
+              "local": false
+            }
+          ],
+          "id": "51",
+          "uuid": "f2ef4033-9001-4427-a418-df8c48e6d054",
+          "name": "Stealer",
+          "type": "stealer",
+          "description": "Malware stealer galaxy.",
+          "version": "1",
+          "icon": "key",
+          "namespace": "misp",
+          "enabled": true,
+          "local_only": false
+        }
+    ]
+}        
+

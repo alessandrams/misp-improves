@@ -1,0 +1,9 @@
+ ["Galaxy"]["GalaxyCluster"]["name" ou "type" ou "id"] : identificação da Galaxy
+ ["Galaxy"]["GalaxyCluster"]["meta"]["value"]: nome do cluster
+ ["Galaxy"]["GalaxyCluster"]["meta"]["galaxy_id"]: id da galaxy
+  
+
+Usando o search: result.json
+
+ ["Event"]["Galaxy"][1,2,3,...]["id"]:
+ ["Event"]["Galaxy"][1,2,3,...]["GalaxyCluster"]["value"]

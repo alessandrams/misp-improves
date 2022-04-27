@@ -1,0 +1,246 @@
+{
+  "Event": {
+    "id": "609",
+    "orgc_id": "6",
+    "org_id": "1",
+    "date": "2021-06-03",
+    "threat_level_id": "1",
+    "info": "DarkChronicles: the consequences of the Colonial Pipeline attack",
+    "published": true,
+    "uuid": "831d2060-6bb9-467c-9f2c-961ae0651829",
+    "attribute_count": "56",
+    "analysis": "0",
+    "timestamp": "1622755937",
+    "distribution": "3",
+    "proposal_email_lock": false,
+    "locked": false,
+    "publish_timestamp": "1650980244",
+    "sharing_group_id": "0",
+    "disable_correlation": false,
+    "extends_uuid": "",
+    "protected": null,
+    "Org": {
+      "id": "1",
+      "name": "ORGNAME",
+      "uuid": "d69c4e82-fa5c-473d-a7b7-9b6e72a783a8",
+      "local": true
+    },
+    "Orgc": {
+      "id": "6",
+      "name": "ICS-CSIRT.io",
+      "uuid": "019e8d5f-83da-4d59-982d-e94cdcc7dbc7",
+      "local": false
+    },
+    "RelatedEvent": [
+      {
+        "Event": {
+          "id": "44",
+          "date": "2021-11-23",
+          "threat_level_id": "2",
+          "info": "ThreatFox IOCs for 2021-11-23",
+          "published": true,
+          "uuid": "0c8027fe-9d7c-4514-b06e-0b512c9d13d5",
+          "analysis": "1",
+          "timestamp": "1637712182",
+          "distribution": "3",
+          "org_id": "1",
+          "orgc_id": "2",
+          "Org": {
+            "id": "1",
+            "name": "ORGNAME",
+            "uuid": "d69c4e82-fa5c-473d-a7b7-9b6e72a783a8"
+          },
+          "Orgc": {
+            "id": "2",
+            "name": "abuse.ch",
+            "uuid": "9b086132-8588-49ed-97fd-8578a777822c"
+          }
+        }
+      },
+      {
+        "Event": {
+          "id": "606",
+          "date": "2021-05-19",
+          "threat_level_id": "4",
+          "info": "AA20-131A_Darkside_Ransomware_Best_Practices_for_Preventing_Business_Disruption_from_Ransomware_Att",
+          "published": true,
+          "uuid": "d81c3a80-018d-413d-9f11-59aa0c67e761",
+          "analysis": "0",
+          "timestamp": "1621578587",
+          "distribution": "3",
+          "org_id": "1",
+          "orgc_id": "5",
+          "Org": {
+            "id": "1",
+            "name": "ORGNAME",
+            "uuid": "d69c4e82-fa5c-473d-a7b7-9b6e72a783a8"
+          },
+          "Orgc": {
+            "id": "5",
+            "name": "CUDESO-PRIV",
+            "uuid": "5e1b7d20-bbbc-456e-b270-479b29b8f09f"
+          }
+        }
+      },
+      {
+        "Event": {
+          "id": "602",
+          "date": "2021-05-04",
+          "threat_level_id": "1",
+          "info": "Shining a Light on DARKSIDE Ransomware Operations",
+          "published": true,
+          "uuid": "bb8cb785-6587-4b8c-9280-981b485b9f4e",
+          "analysis": "1",
+          "timestamp": "1621024609",
+          "distribution": "3",
+          "org_id": "1",
+          "orgc_id": "3",
+          "Org": {
+            "id": "1",
+            "name": "ORGNAME",
+            "uuid": "d69c4e82-fa5c-473d-a7b7-9b6e72a783a8"
+          },
+          "Orgc": {
+            "id": "3",
+            "name": "CUDESO",
+            "uuid": "56c42374-fdb8-4544-a218-41ffc0a8ab16"
+          }
+        }
+      }
+    ],
+    "Galaxy": [
+      {
+        "id": "44",
+        "uuid": "3f44af2e-1480-4b6b-9aa8-f9bb21341078",
+        "name": "Ransomware",
+        "type": "ransomware",
+        "description": "Ransomware galaxy based on https://docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g/pubhtml",
+        "version": "4",
+        "icon": "btc",
+        "namespace": "misp",
+        "enabled": true,
+        "local_only": false,
+        "GalaxyCluster": [
+          {
+            "id": "7539",
+            "uuid": "f514a46e-53ff-4f07-b75a-aed289cf221f",
+            "collection_uuid": "10cf658b-5d32-4c4b-bb32-61760a640372",
+            "type": "ransomware",
+            "value": "Darkside",
+            "tag_name": "misp-galaxy:ransomware=\"Darkside\"",
+            "description": "Darkside, the latest ransomware operation to emerge has been attacking organizations beginning earlier this month. Darkside\u2019s customized attacks on companies have already garnered them million-dollar payouts.\nThrough their \u201cpress release\u201d, these threat actors have claimed to be affiliated with prior ransomware operations making millions of dollars. They stated that they created this new product to match their needs, as prior products didn\u2019t.\n Darkside explains that they only target companies they know that can pay the specified ransom. They have allegedly promised that they will not attack the following sectors. They include medicine, education, non-profit organizations, and the government sector.",
+            "galaxy_id": "44",
+            "source": "Various",
+            "authors": [
+              "https://docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g/pubhtml",
+              "http://pastebin.com/raw/GHgpWjar",
+              "MISP Project",
+              "https://id-ransomware.blogspot.com/2016/07/ransomware-list.html"
+            ],
+            "version": "101",
+            "distribution": "3",
+            "sharing_group_id": null,
+            "org_id": "0",
+            "orgc_id": "0",
+            "default": true,
+            "locked": false,
+            "extends_uuid": "",
+            "extends_version": "0",
+            "published": false,
+            "deleted": false,
+            "GalaxyClusterRelation": [],
+            "Org": {
+              "id": "0",
+              "name": "MISP",
+              "date_created": "",
+              "date_modified": "",
+              "description": "Automatically generated MISP organisation",
+              "type": "",
+              "nationality": "Not specified",
+              "sector": "",
+              "created_by": "0",
+              "uuid": "0",
+              "contacts": "",
+              "local": true,
+              "restricted_to_domain": [],
+              "landingpage": null
+            },
+            "Orgc": {
+              "id": "0",
+              "name": "MISP",
+              "date_created": "",
+              "date_modified": "",
+              "description": "Automatically generated MISP organisation",
+              "type": "",
+              "nationality": "Not specified",
+              "sector": "",
+              "created_by": "0",
+              "uuid": "0",
+              "contacts": "",
+              "local": true,
+              "restricted_to_domain": [],
+              "landingpage": null
+            },
+            "meta": {
+              "colt-average": [
+                "11d"
+              ],
+              "colt-median": [
+                "7d"
+              ],
+              "refs": [
+                "https://www.digitalshadows.com/blog-and-research/darkside-the-new-ransomware-group-behind-highly-targeted-attacks/",
+                "https://www.wired.com/story/ransomware-gone-corporate-darkside-where-will-it-end/",
+                "https://darksidedxcftmqa.onion.foundation/"
+              ]
+            },
+            "tag_id": "1254",
+            "local": false
+          }
+        ]
+      }
+    ],
+    "CryptographicKey": [],
+    "Tag": [
+      {
+        "id": "1177",
+        "name": "tlp:white",
+        "colour": "#00d622",
+        "exportable": true,
+        "user_id": "0",
+        "hide_tag": false,
+        "numerical_value": null,
+        "is_galaxy": false,
+        "is_custom_galaxy": false,
+        "local_only": false,
+        "local": 0
+      },
+      {
+        "id": "1254",
+        "name": "misp-galaxy:ransomware=\"Darkside\"",
+        "colour": "#0088cc",
+        "exportable": true,
+        "user_id": "0",
+        "hide_tag": false,
+        "numerical_value": null,
+        "is_galaxy": true,
+        "is_custom_galaxy": false,
+        "local_only": false,
+        "local": 0
+      },
+      {
+        "id": "1289",
+        "name": "dhs-ciip-sectors:DHS-critical-sectors=\"energy\"",
+        "colour": "#930900",
+        "exportable": true,
+        "user_id": "0",
+        "hide_tag": false,
+        "numerical_value": null,
+        "is_galaxy": false,
+        "is_custom_galaxy": false,
+        "local_only": false,
+        "local": 0
+      }
+    ]
+  }
+}
