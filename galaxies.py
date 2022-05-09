@@ -11,7 +11,7 @@ def check_geolocation_galaxy(cluster):
     with open('key-words/geolocations.txt', 'r') as f:
         relevant_geolocations = f.read().splitlines()
 
-    if cluster in relevant_geolocations:
+    if cluster.casefold() in relevant_geolocations:
         return True
     else:
         return False    
@@ -20,7 +20,7 @@ def check_sector_galaxy(cluster):
     with open('key-words/sectors.txt', 'r') as f:
         relevant_sectors = f.read().splitlines()
 
-    if cluster in relevant_sectors:
+    if cluster.casefold() in relevant_sectors:
         return True
     else:
         return False    
@@ -33,7 +33,7 @@ if __name__ == '__main__':
     ## 52 = Target Information
     ## 47 = Sector
 
-    date_search = date.today() - timedelta(26)
+    date_search = date.today() - timedelta(35)
 
     with open('key-words/galaxies_ids.txt', 'r') as f:
         relevant_galaxy_ids = f.read().splitlines()  
