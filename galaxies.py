@@ -6,6 +6,11 @@ from pymisp import MISPEvent
 from keys import misp_url, misp_key, misp_verifycert
 from datetime import date, timedelta
 
+## Funcao para fazer o match de cluster de geolocalizacoes relevantes
+#### Verifica se o evento possui em suas galaxias algum dos paises listados no arquivo ./key-words/geolocations.txt
+#### *IMPORTANTE*: 1- os paises devem ser adicionados ao arquivo "geolocations.txt" com todas as letras minusculas;
+####               2- cada linha deve conter apenas um pais;
+####               3- o nome do pais deve ser igual ao cluster já existente no MISP (em ingles)
 
 def check_geolocation_galaxy(cluster):
     with open('key-words/geolocations.txt', 'r') as f:
@@ -15,6 +20,13 @@ def check_geolocation_galaxy(cluster):
         return True
     else:
         return False    
+
+
+## Funcao para fazer o match de cluster de verticais de negocio relevantes
+#### Verifica se o evento possui em suas galaxias algum dos setores listados no arquivo ./key-words/sectors.txt
+#### *IMPORTANTE*: 1- os setores devem ser adicionados ao arquivo "sectors.txt" com todas as letras minusculas;
+####               2- cada linha deve conter apenas um setor;
+####               3- o nome do setor deve ser igual ao cluster já existente no MISP 
 
 def check_sector_galaxy(cluster):
     with open('key-words/sectors.txt', 'r') as f:
@@ -28,13 +40,19 @@ def check_sector_galaxy(cluster):
 
 if __name__ == '__main__':
 
-    ## IDs MPH:
+    ## IDs Galaxies MPH:
     ## 11 = Country
     ## 52 = Target Information
     ## 47 = Sector
 
+    ## Subtracao de datas para coletar apenas eventos do dia anterior a execucao do script 
+
     date_search = date.today() - timedelta(35)
 
+
+    ## Verifica as galaxias que devem ser consideradas
+    ## Caso seja necessario considerar novas galaxias, basta adicionar o ID da galaxia no arquivo ./key-words/galaxies_ids.txt 
+    
     with open('key-words/galaxies_ids.txt', 'r') as f:
         relevant_galaxy_ids = f.read().splitlines()  
 
